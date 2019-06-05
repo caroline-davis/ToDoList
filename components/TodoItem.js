@@ -16,12 +16,12 @@ export default class TodoItem extends React.Component {
 
       >
         <Text style={(todoItem.done) ? { color: '#AAAAAA' } : { color: '#313131' }}>
-        { todoItem.title }
+        { this.props.todoItem.title }
         </Text>
 
         <Button
         title= "Remove"
-        color={(todoItem.done) ? 'rgba(200, 0, 0, 0.5)' : 'rgba(255, 0, 0, 1)' }
+        color={(this.props.todoItem.done) ? 'rgba(200, 0, 0, 0.5)' : 'rgba(255, 0, 0, 1)' }
         onPress={() => this.props.removeTodo()}
         />
 
